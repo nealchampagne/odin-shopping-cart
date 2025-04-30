@@ -1,0 +1,94 @@
+.shopcard {
+  width: 100%;
+  height: 20rem;
+  display: grid;
+  grid-template-rows: 3rem 1fr 4rem;
+  align-items: center;
+  justify-items: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
+}
+
+.cardtop {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  justify-items: start;
+  gap: 2rem;
+}
+
+.cardbottom {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 2rem);
+  align-items: end;
+  justify-items: end;
+}
+
+.quantity {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.title {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  justify-self: end;
+}
+
+.image {
+  height: 50%;
+  width: auto;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.increment, .decrement {
+  font-size: 2rem;
+}
+
+.increment:hover, .decrement:hover {
+  cursor: pointer;
+}
+
+.input {
+  width: 2rem;
+  height: 1.5rem;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.addtocart {
+  background: hsl(288, 79%, 72%);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.addtocart:hover {
+  cursor: pointer;
+}
