@@ -1,0 +1,9 @@
+.shop {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 25rem);
+  gap: 3rem;
+  justify-self: center;
+  align-items: center;
+  justify-items: center;
+}
