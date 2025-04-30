@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, createContext } from 'react';
+
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import Cart from './components/Cart';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export const CartContext = createContext([]);
+
+function App({ page }) {
+
+  const [cartArray, setCartArray] = useState([]);
+
+  let main;
+
+  if (page === "home") {
+    main = <Home />
+  } else if (page === "shop") {
+    main = <Shop />
+  } else if (page === "cart") {
+    main = <Cart />
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <CartContext.Provider value={{cartArray, setCartArray}}>
+      <Navbar />
+      <div className="main">
+        { main }
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </CartContext.Provider>
+  );
+};
 
 export default App
