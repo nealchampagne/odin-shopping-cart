@@ -1,4 +1,4 @@
-.shopcard {
+.shopCard {
   width: 100%;
   height: 20rem;
   display: grid;
@@ -11,6 +11,10 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
   box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
+}
+
+button {
+  border: none;
 }
 
 .cardtop {
@@ -53,7 +57,6 @@
 }
 
 .image {
-  height: 50%;
   width: auto;
   height: 10rem;
   object-fit: contain;
@@ -61,6 +64,7 @@
 
 .increment, .decrement {
   font-size: 2rem;
+  background: white;
 }
 
 .increment:hover, .decrement:hover {
