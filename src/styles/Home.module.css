@@ -1,0 +1,61 @@
+.home {
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hidden { 
+  display: none;
+}
+
+.title {
+  z-index: 2;
+  position: relative;
+  color: hsla(0, 0%, 100%, 70%);
+  top: 30rem;
+  font-size: 8rem;
+}
+
+.imagecontainer {
+  display: grid;
+  grid-template: min-content min-content / min-content min-content;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.one {
+  position: relative;
+  left: -10rem;
+  height: 30rem;
+  z-index: 1;
+}
+
+.two {
+  position: relative;
+  top: 4rem;
+  height: 25rem;
+  width: 25rem;
+  z-index: 1;
+  filter: blur(0.1rem)
+}
+
+.three {
+  position: relative;
+  left: 8rem;
+  top: -10rem;
+  height: 25rem;
+  width: 25rem;
+  filter: blur(0.2rem);
+}
+
+.four {
+  position: relative;
+  left: 12.5rem;
+  top: -8rem;
+  height: 30rem;
+}
