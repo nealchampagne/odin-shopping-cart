@@ -3,7 +3,7 @@ import styles from '../styles/ShopItem.module.css'
 import { CartContext } from '../App';
 
 
-const ShopItem = ({id, title, price, image, rating}) => {
+const ShopItem = ({id, title, price, image, description, rating}) => {
   
   const [count, setCount] = useState(0);
   const { cartArray, setCartArray }  = useContext(CartContext);
@@ -17,33 +17,35 @@ const ShopItem = ({id, title, price, image, rating}) => {
   };
 
   const handleAddItem = () => {
-    let cartCopy = cartArray;
+    let cartCopy = [...cartArray];
     if (count !== 0) {
       if (cartCopy.length === 0 || !cartCopy.find(e => e.id === id)) {
-        cartCopy.splice(0, 0, { id:id, count: count })
+        cartCopy.splice(0, 0, { id: id, count: count, cost: price * count })
         setCartArray(cartCopy);
+        setCount(0);
       } else {
         let oldElement = cartCopy.find(e => e.id === id);
-        cartCopy.splice(cartCopy.indexOf(oldElement), 1, { id: oldElement.id, count: oldElement.count + count})
+        cartCopy.splice(cartCopy.indexOf(oldElement), 1, { id: oldElement.id, count: oldElement.count + count, cost: oldElement.cost + (price * count)})
         setCartArray(cartCopy);
+        setCount(0);
       }
     }
   };
 
   return (
-    <div className={styles.shopcard}>
+    <div className={styles.shopCard}>
       <div className={styles.cardtop}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.price}>${parseFloat(price).toFixed(2)}</div>
+        <p tabIndex="0" aria-label="title" className={styles.title}>{title}</p>
+        <p tabIndex="0" aria-label="price" className={styles.price}>${parseFloat(price).toFixed(2)}</p>
       </div>
-      <img className={styles.image} src={image} />
+      <img tabIndex="0" alt={title} className={styles.image} src={image} />
       <div className={styles.cardbottom}>
         <div className={styles.quantity}>
-          <div className={styles.decrement} onClick={() => handleUpdateCount(-1)}>-</div>
-          <input className={styles.input} type="number" value={count} onChange={e => (e.target.value >= 0 && e.target.value !== '') ? setCount(Number(e.target.value).toString()) : setCount(0)}/>
-          <div className={styles.increment} onClick={() => handleUpdateCount(1)}>+</div>
+          <button aria-label="decrement item"className={styles.decrement} onClick={() => handleUpdateCount(-1)}>-</button>
+          <input aria-label="quantity" className={styles.input} type="number" value={count} onChange={e => (e.target.value >= 0 && e.target.value !== '') ? setCount(Number(e.target.value).toString()) : setCount(0)}/>
+          <button aria-label="increment item" className={styles.increment} onClick={() => handleUpdateCount(1)}>+</button>
         </div>
-        <div className={styles.addtocart} onClick={handleAddItem}>Add to Cart</div>
+        <button className={styles.addtocart} onClick={handleAddItem}>Add to Cart</button>
       </div>
     </div>
   );
