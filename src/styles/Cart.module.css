@@ -1,0 +1,76 @@
+.cart {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 42rem;
+}
+
+button {
+  border: none;
+}
+
+.main {
+  display: grid;
+  gap: 1rem;
+}
+
+.emptyCart {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 1.5rem 1.5rem;
+  gap: 1rem;
+  width: 42rem;
+  height: 6rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
+}
+
+.returnButton {
+  color: black;
+  background: hsl(288, 79%, 72%);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-weight: 400;
+}
+
+.subtotal {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  justify-items: stretch;
+  height: 5rem;
+  width: 100%;
+  background: white;
+  border-radius: 0.1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-weight: 700;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
+}
+
+.checkout {
+  border-radius: 1rem;
+  width: max-content;
+  background: hsl(288, 79%, 72%);
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-self: end;
+  margin: 1rem 1rem 0 0;
+}
+
+.checkout:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  background: hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 60%);
+  pointer-events: none;
+}
