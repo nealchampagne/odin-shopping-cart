@@ -5,7 +5,7 @@ const routes = [
   {
     path: "/",
     element: <App page="home" />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage error={false} />,
   },
   {
     path: "shop",
