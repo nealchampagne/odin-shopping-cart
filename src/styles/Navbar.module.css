@@ -17,7 +17,7 @@ header {
   grid-template-columns: 20rem 1fr 20rem;
   padding: 1rem;
   background: hsl(288, 79%, 72%);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .namecontainer {
@@ -33,8 +33,6 @@ nav {
   align-items: center;
   justify-content: center;
 }
-
-
 
 .pagelink {
   color: black;

@@ -8,7 +8,7 @@
   border-radius: 1rem;
   padding: 1rem;
   background: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 700;
   box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
 }
@@ -42,7 +42,6 @@ button {
   gap: 0.5rem;
 }
 
-
 .title {
   width: 100%;
   display: -webkit-box;
@@ -62,12 +61,14 @@ button {
   object-fit: contain;
 }
 
-.increment, .decrement {
+.increment,
+.decrement {
   font-size: 2rem;
   background: white;
 }
 
-.increment:hover, .decrement:hover {
+.increment:hover,
+.decrement:hover {
   cursor: pointer;
 }
 
@@ -82,8 +83,8 @@ button {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .addtocart {

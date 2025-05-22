@@ -8,11 +8,10 @@
   background: white;
   border-radius: 0.5rem;
   box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .errorHeading {
-
   color: red;
 }
 

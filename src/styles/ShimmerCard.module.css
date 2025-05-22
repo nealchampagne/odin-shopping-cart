@@ -31,7 +31,8 @@
   padding: 0.5rem 2rem 0 0;
 }
 
-.title, .titleEnd{
+.title,
+.titleEnd {
   height: 1rem;
   border-radius: 0.5rem;
 }
@@ -58,7 +59,8 @@
   justify-self: center;
 }
 
-.content, .button {
+.content,
+.button {
   height: 0.5rem;
   width: 40%;
   border-radius: 0.25rem;
@@ -72,7 +74,12 @@
 }
 
 .shimmer {
-  background: linear-gradient(to right, hsl(0, 0%, 95%) 2%,  hsl(0, 0%, 90%) 8%, hsl(0, 0%, 95%) 14%);
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 95%) 2%,
+    hsl(0, 0%, 90%) 8%,
+    hsl(0, 0%, 95%) 14%
+  );
   background-size: 1200px 100%;
   animation: 1s linear infinite shimmer;
   -webkit-animation: 1s linear infinite shimmer;
