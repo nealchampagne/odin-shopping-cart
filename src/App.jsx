@@ -1,35 +1,33 @@
-import { useState, createContext } from 'react';
+import { CartContextProvider } from "./components/CartContext";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Shop from "./components/Shop";
+import Cart from "./components/Cart";
+import "./App.css";
 
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Shop from './components/Shop';
-import Cart from './components/Cart';
-import './App.css'
-
-export const CartContext = createContext([]);
-
-function App({ page }) {
-
-  const [cartArray, setCartArray] = useState([]);
-
+const App = ({ page }) => {
   let main;
 
+  // Render different page components based on page prop
   if (page === "home") {
-    main = <Home />
+    main = <Home />;
   } else if (page === "shop") {
-    main = <Shop />
+    main = <Shop />;
   } else if (page === "cart") {
-    main = <Cart />
+    main = <Cart />;
   }
 
   return (
-    <CartContext.Provider value={{cartArray, setCartArray}}>
-      <Navbar />
-      <div className="main">
-        { main }
-      </div>
-    </CartContext.Provider>
+    // Pass the cart state variable and setter to context
+    <CartContextProvider
+      children={
+        <>
+          <Navbar />
+          <div className="main">{main}</div>
+        </>
+      }
+    />
   );
 };
 
-export default App
+export default App;

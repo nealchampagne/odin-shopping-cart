@@ -9,12 +9,12 @@ const routes = [
   },
   {
     path: "shop",
-    element: <App page="shop" />
+    element: <App page="shop" />,
   },
   {
     path: "cart",
-    element: <App page="cart" />
-  }
+    element: <App page="cart" />,
+  },
 ];
 
 export default routes;
