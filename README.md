@@ -1,6 +1,7 @@
 # Odin Shopping Cart
 
 ## Description
+
 This is my implementation of the Shopping Cart capstone project from the React Course of the Odin Project's Full-Stack Javascript curriculum.
 
 Photo by <a href="https://unsplash.com/@navidsohrabi?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Navid Sohrabi</a> on <a href="https://unsplash.com/photos/a-person-wearing-a-purple-and-white-shoes-standing-on-a-sidewalk-vo2NSFkB4A8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
