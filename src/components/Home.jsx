@@ -41,8 +41,16 @@ const Home = () => {
         loading ? styles.hidden : styles.home}>
         <h1 className={styles.title}>KON · SUMP · SHON</h1>
         <div className={styles.imagecontainer}>
-          <img ref={(el) => (imageRefs.current[0] = el)} className={styles.image + " " + styles.one} src={purpleglasses} />
-          <img ref={(el) => (imageRefs.current[1] = el)} className={styles.image + " " + styles.two} src={purplevisor} />
+          <img 
+            ref={(el) => (imageRefs.current[0] = el)} 
+            className={styles.image + " " + styles.one} 
+            src={purpleglasses} 
+          />
+          <img 
+            ref={(el) => (imageRefs.current[1] = el)} 
+            className={styles.image + " " + styles.two} 
+            src={purplevisor} 
+          />
           <img
             ref={(el) => (imageRefs.current[2] = el)}
             className={styles.image + " " + styles.three}
@@ -50,7 +58,9 @@ const Home = () => {
           />
           <img 
             ref={(el) => (imageRefs.current[3] = el)} 
-            className={styles.image + " " + styles.four} src={flowerpocket} />
+            className={styles.image + " " + styles.four} 
+            src={flowerpocket} 
+          />
         </div>
       </div>
     </>
